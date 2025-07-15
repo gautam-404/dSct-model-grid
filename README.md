@@ -1,4 +1,4 @@
-# $\delta$ Scuti Star Model Grid
+# $\delta$ Scuti Pulsation Model Grid
 
 This repository contains information regardingthe $\delta$ Scuti star pulsation model grid associated with our [paper](https://arxiv.org/abs/2507.03561).
 
