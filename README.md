@@ -8,7 +8,9 @@ The complete model grid is available on [Zenodo](https://zenodo.org/records/1583
 
 ## Grid Description
 
-The full modelling methodology is described in our [paper](https://arxiv.org/abs/2507.03561). The grid contains the following parameters:
+The full modelling methodology is described in our [paper](https://arxiv.org/abs/2507.03561). The grid is generated using the [MESA](https://docs.mesastar.org/en/latest/) stellar evolution code and the [GYRE](https://gyre.readthedocs.io/en/stable/) pulsation code. The specific python scripts used to modify the inlists and generate the grid will be made available on request.
+
+The grid contains the following parameters:
 
 ### Basic Stellar Model Parameters
 - `i`: index
@@ -70,12 +72,12 @@ import pandas as pd
 df = pd.read_parquet('path/to/grid.parquet')
 ```
 
-If there is not enough memory on your machine, you can read the grid in required chunks. For example, to read specific columns of the grid for the ZAMS phase, you can do:
+Since the grid is quite large, if there is not enough memory on your machine, you can read the grid in required chunks. For example, to read specific columns of the grid for the pre-main sequence phase, you can do:
 
 ```python
 import pandas as pd
 
-df = pd.read_parquet('path/to/grid.parquet', filters=[('phase_of_evolution', '==', 3)], columns=['i', 'm', 'z', 'v', 'Myr', 'teff', 'log_L', 'density', 'Dnu', 'eps'])
+df = pd.read_parquet('path/to/grid.parquet', filters=[('phase_of_evolution', '==', 2)], columns=['i', 'm', 'z', 'v', 'Myr', 'teff', 'log_L', 'density', 'Dnu', 'eps'])
 ```
 
-Here, the `filters` parameter is used to query specific rows of the grid and the `columns` parameter is used to select specific columns.
+Here, the `filters` argument is used to query specific rows of the grid. Multiple filters can be applied as an AND condition at the same time. The `columns` argument is used to select specific columns.
