@@ -1,6 +1,6 @@
 # $\delta$ Scuti Pulsation Model Grid
 
-This repository contains information regardingthe $\delta$ Scuti star pulsation model grid associated with our [paper](https://arxiv.org/abs/2507.03561).
+This repository contains information regarding the $\delta$ Scuti star pulsation model grid associated with our [paper](https://arxiv.org/abs/2507.03561).
 
 ## Data Access
 
@@ -72,7 +72,7 @@ import pandas as pd
 df = pd.read_parquet('path/to/grid.parquet')
 ```
 
-Since the grid is quite large, if there is not enough memory on your machine, you can read the grid in required chunks. For example, to read specific columns of the grid for the pre-main sequence phase, you can do:
+Since the grid is quite large, you might prefer reading it in chunks to avoid memory issues. For example, to read specific columns of the grid for the pre-main sequence phase, you can do:
 
 ```python
 import pandas as pd
