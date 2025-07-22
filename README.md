@@ -50,11 +50,11 @@ The grid contains the following parameters:
 - `omega_c`: Critical rotation rate in cycles/day
 - `v_eq`: Surface average rotation rate in km/s
 
-### Energy Generation
+<!-- ### Energy Generation
 - `log_LH`: log Luminosity from H-burning
 - `log_LHe`: log Luminosity from He-burning
 - `pp`: log Luminosity from p-p chain reaction
-- `cno`: log Luminosity from CNO cycle
+- `cno`: log Luminosity from CNO cycle -->
 
 ### Gravity Darkening
 - `grav_dark_L_polar`: log Luminosity from gravity darkening at the pole
